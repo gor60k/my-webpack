@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="lang">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title of this site</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    display: block;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.header {
+    width: 100%;
+    margin-bottom: 9px;
+}
+.header__wrapper {
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__wrapper>ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.list__item {
+    margin-right: 46px;
+}
+.list__item>a {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #141414;
+    position: relative;
+}
+.list__item::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1px;
+    background-color: #0099FF;
+    height: 2px;
+    opacity: 0;
+    border-radius: 2px;
+    transition: all .3s ease;
+}
+.list__item:hover::after {
+    width: 35px;
+    opacity: 1;
+    transition: all .3s ease;
+}
+.header__btns {
+    margin: 0;
+}
+.header__btn__item-first {
+    margin-right: 32px;
+}
+.header__btn-first {
+    border: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #333333;
+}
+.header__btn-first::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 1px;
+    background-color: #0099FF;
+    height: 2px;
+    opacity: 0;
+    border-radius: 2px;
+    transition: all .3s ease;
+}
+.header__btn-first:hover::after {
+    width: 35px;
+    opacity: 1;
+    transition: all .3s ease;
+}
+.header__btn-second {
+    height: 54px;
+    width: 153px;
+    border-radius: 8px;
+    background-color: #0099FF;
+    border: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: all .3s ease;
+}
+.header__btn-second:hover {
+    background: transparent;
+    border: 2px solid #0099FF;
+    color: #0099FF;
+    transition: all .3s ease;
+}
+
+
+
+.home__title {
+    max-width: 893px;
+    margin: 0 auto;
+    margin-bottom: 73px;
+}
+.home__title-txt {
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 110px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: rgba(14, 16, 22, 0.95);
+}
+.home__subtitle {
+    max-width: 509px;
+    margin: 0 auto;
+}
+.home__subtitle-txt {
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+    color: #35393F;
+}
+.home-form {
+    margin-bottom: 44px;
+}
+.home-form__wrap {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.home-form__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.home-form__field {
+    width: 300px;
+    
+    border: 2px solid #0099FF;
+    padding: 10px 13px;
+    border-radius: 8px 0px 0px 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: black;
+}
+.home-form__field::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #B2B2B2;
+}
+.home-form__btn {
+    height: 52px;
+    width: 157px;
+    background: #0099FF;
+    border-radius: 0px 8px 8px 0px;
+    border: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.home__text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.home__text-txt {
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #B2B2B2;
+}
+.team__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 90px;
+}
+
+
+.Start__wrap {
+    background-color: #3CA9FF;
+    border-radius: 20px;
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.start__img {
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 14px;
+}
+.start__title {
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.start__title-txt {
+    width: 556px;
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+}
+.start__btn {
+    height: 51px;
+    width: 153px;
+    border-radius: 8px;
+    border: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #0E1016;
+    margin-bottom: 31px;
+}
+.start__bottom {
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 69px;
+}
+.start__bottom-txt {
+    position: relative;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-right: 41px;
+}
+
+
+
+.ex__wrap {
+    width: 1240px;
+    margin: 0 auto;
+    background-color: #181818;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.ex__title {
+    display: inline-block  gfd;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.ex__title-txt {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+    width: 708px;
+}
+.ex__subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 69px;
+}
+.ex__subtitle-txt {
+    margin: 0;
+    width: 441px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 31px;
+    text-align: center;
+    color: #F4F3F3;
+}
+.ex__btn {
+    height: 51px;
+    width: 212px;
+    border-radius: 8px;
+    background: #0099FF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 0;
+    margin-bottom: 40px;
+}
+.ex__img-pic {
+    width: 100%;
+}
+
+
+.content__wrap {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1260px;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 20px;
+}
+.footer__head {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 21px 25px;
+    padding-left: 40px;
+    margin-bottom: 49px;
+}
+.footer__btn {
+    height: 39px;
+    width: 130px;
+    border-radius: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #029EFF;
+    border-radius: 8px;
+}
+.footer__content {
+    padding: 21px 25px;
+    padding-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0;
+}
+.footer__grid__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.foot__grid__list {
+    list-style-type: none;
+    padding: 0;
+}
+.foot__list__item {
+    margin: 0;
+    margin-bottom: 20px;
+}
+.green__link {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #0C9F64;
+}
+.yellow__link {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FEC104;
+}
+.foot__item__link {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25px;
+    color: #778291;
+}
+.first__list {
+    margin-bottom: 49px;
+}
+.footer__grid__text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #778291;
+}
+.footer__grid__subtitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.footer-form__wrap {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.footer-form__info {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.footer-form__field {
+    border: 0;
+    width: 256px;
+    height: 40px;
+    background: rgba(119, 130, 145, 0.3);
+    border-radius: 8px 0px 0px 8px;
+}
+.footer-form__btn {
+    border: 0;
+    height: 40px;
+    width: 78px;
+    background: #595D68;
+    border-radius: 0px 8px 8px 0px;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="header__wrapper"><a href="#"><img class="header__logo" src="./images/logo.svg" alt="Logo"></a>
+          <ul class="header__list">
+            <li class="list__item"><a href="#">Product</a></li>
+            <li class="list__item"><a href="#">Templates</a></li>
+            <li class="list__item"><a href="#">Pricing</a></li>
+            <li class="list__item"><a href="#">Customers</a></li>
+            <li class="list__item"><a href="#">Learn</a></li>
+          </ul>
+          <ul class="header__btns">
+            <li class="header__btn__item-first">
+              <button class="header__btn-first">Log in</button>
+            </li>
+            <li class="header__btn__item">
+              <button class="header__btn-second">Start free trial</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="home__title">
+        <h1 class="home__title-txt">Where hiring comes together.</h1>
+      </div>
+      <div class="home__subtitle">
+        <p class="home__subtitle-txt">Everything you need to organise your hiring and make a great impression.</p>
+      </div>
+      <form class="home-form">
+        <fieldset class="home-form__wrap">
+          <p class="home-form__info">
+            <input class="home-form__field" type="text" placeholder="Work email">
+            <input class="home-form__btn" type="button" value="Start free trial">
+          </p>
+        </fieldset>
+      </form>
+      <div class="home__text">
+        <p class="home__text-txt">Join thousands of teams hiring with Homerun</p>
+      </div>
+      <div class="team__wrap"><img class="team__img-pic" src="./images/team-1.svg" alt="" srcset=""><img class="team__img-pic" src="./images/team-2.svg" alt="" srcset=""><img class="team__img-pic" src="./images/team-3.svg" alt="" srcset=""><img class="team__img-pic" src="./images/team-4.svg" alt="" srcset=""><img class="team__img-pic" src="./images/team-5.svg" alt="" srcset=""><img class="team__img-pic" src="./images/team-6.svg" alt="" srcset=""><img class="team__img-pic" src="./images/team-7.svg" alt="" srcset=""></div>
+      <div class="ex__wrap">
+        <div class="ex__title">
+          <h2 class="ex__title-txt">Kickstart hiring with Homerun templates.</h2>
+        </div>
+        <div class="ex__subtitle">
+          <p class="ex__subtitle-txt">Ready to use job templates to help you with the hardest parts of creating a job post.</p>
+        </div>
+        <button class="ex__btn">Explore all templates</button><img class="ex__img-pic" src="./images/Rectangle.png" alt="" srcset="">
+      </div>
+      <div class="Start__wrap">
+        <div class="start__img"><img class="start__img-pic" src="./images/pug.svg" alt="Pug in Hat" srcset=""></div>
+        <div class="start__title">
+          <h2 class="start__title-txt">Start your free Homerun trial today</h2>
+        </div>
+        <button class="start__btn">Start free trial </button>
+        <div class="start__bottom">
+          <p class="start__bottom-txt">Totally free for 15 days</p>
+          <p class="start__bottom-txt">No credit card needed</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="wrapper">
+        <div class="content__wrap">
+          <div class="footer__head"><img src="./images/foot-logo.svg" alt="Logo">
+            <button class="footer__btn">Start free trial</button>
+          </div>
+          <div class="footer__content">
+            <div class="footer__grid">
+              <p class="footer__grid__title">Product</p>
+              <ul class="foot__grid__list first__list">
+                <li class="foot__list__item"><a class="green__link" href="#">Hire</a></li>
+                <li class="foot__list__item"><a class="yellow__link" href="#">Create</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Template</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">All features</a></li>
+              </ul>
+              <ul class="foot__grid__list">
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Pricing</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">New in Homerun ✨</a></li>
+              </ul>
+            </div>
+            <div class="footer__grid">
+              <p class="footer__grid__title">Learn</p>
+              <ul class="foot__grid__list first__list">
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Blog</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Help Center</a></li>
+              </ul>
+              <p class="footer__grid__title">Guides</p>
+              <ul class="foot__grid__list">
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Remote Hiring</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Employer Branding</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Job Interviewing</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Diversity & Inclusion</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Attracting Talent</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">GDPR Hiring </a></li>
+              </ul>
+            </div>
+            <div class="footer__grid">
+              <p class="footer__grid__title">About Homerun</p>
+              <ul class="foot__grid__list first__list">
+                <li class="foot__list__item"><a class="foot__item__link" href="#">About us</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">We're hiring</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Contact us</a></li>
+              </ul>
+              <p class="footer__grid__title">Legal</p>
+              <ul class="foot__grid__list">
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Terms</a></li>
+                <li class="foot__list__item"><a class="foot__item__link" href="#">Privacy</a></li>
+              </ul>
+            </div>
+            <div class="footer__grid form__grid">
+              <p class="footer__grid__title">Art of Work newsletter</p>
+              <p class="footer__grid__text">Receive must-read articles and trends on company culture, hiring and work/life balance.</p>
+              <p class="footer__grid__subtitle">Sign up to our newsletter</p>
+              <form class="footer-form">
+                <fieldset class="footer-form__wrap">
+                  <p class="footer-form__info">
+                    <input class="footer-form__field" type="text">
+                    <input class="footer-form__btn" type="button" value="">
+                  </p>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

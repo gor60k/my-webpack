@@ -1,0 +1,63 @@
+-
+    var siteTitle = "title of this site"
+    var lang = "ru"
+
+doctype html
+html(lang="lang")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{siteTitle}
+        style
+            include styles/style.scss
+    body
+        include modules/header
+        .wrapper
+            .home__title
+                h1.home__title-txt Where hiring comes together.
+            .home__subtitle
+                p.home__subtitle-txt Everything you need to organise your hiring and make a great impression.
+
+            form.home-form
+                fieldset.home-form__wrap
+                    p.home-form__info
+                        input.home-form__field(type="text" placeholder="Work email")
+                        input.home-form__btn(type="button", value="Start free trial")
+
+            .home__text
+                p.home__text-txt Join thousands of teams hiring with Homerun
+            
+            .team__wrap
+                img.team__img-pic(src="./images/team-1.svg", alt="", srcset="")
+                img.team__img-pic(src="./images/team-2.svg", alt="", srcset="")
+                img.team__img-pic(src="./images/team-3.svg", alt="", srcset="")
+                img.team__img-pic(src="./images/team-4.svg", alt="", srcset="")
+                img.team__img-pic(src="./images/team-5.svg", alt="", srcset="")
+                img.team__img-pic(src="./images/team-6.svg", alt="", srcset="")
+                img.team__img-pic(src="./images/team-7.svg", alt="", srcset="")
+
+            .ex__wrap
+                .ex__title
+                    h2.ex__title-txt Kickstart hiring with Homerun templates.
+                
+                .ex__subtitle
+                    p.ex__subtitle-txt Ready to use job templates to help you with the hardest parts of creating a job post.
+
+                button.ex__btn Explore all templates
+
+                img.ex__img-pic(src="./images/Rectangle.png", alt="", srcset="")
+
+            .Start__wrap
+                .start__img
+                    img.start__img-pic(src="./images/pug.svg", alt="Pug in Hat", srcset="")
+
+                .start__title
+                    h2.start__title-txt Start your free Homerun trial today
+                
+                button.start__btn Start free trial 
+
+                .start__bottom
+                    p.start__bottom-txt Totally free for 15 days
+                    p.start__bottom-txt No credit card needed
+        include modules/footer   
